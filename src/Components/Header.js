@@ -1,17 +1,18 @@
 import React from 'react'
-
-const Header = ({brand}) => {
+import { NavLink } from 'react-router-dom'
+const Header = ({ brand }) => {
     return (
         <>
             <header className="header">
                 <div className="header__lista contenedor">
-                    <a href="/">
+                    <NavLink to="/">
                         {brand}
-                    </a>
+                    </NavLink>
                     <nav className="navegacion">
-                        <a href="/">Inicio</a>
-                        <a href="/">Acerca de</a>
-                        <a href="/">Nosotros</a>
+                        <NavLink to="/" exact={true}>Inicio</NavLink>
+                        <NavLink to="/acerca-de">Acerca de</NavLink>
+                        <NavLink to="/nosotros">Nosotros</NavLink>
+                        <NavLink to="/personajes">Personajes</NavLink>
                     </nav>
                 </div>
             </header>

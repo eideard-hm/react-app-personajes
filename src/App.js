@@ -1,15 +1,10 @@
-import Header from './Components/Header'
-import Footer from './Components/Footer'
-import Personajes from './Components/Personajes'
 import './App.css';
+import AppRouter from './routers/AppRouter';
 
 const App = () => {
   return (
     <>
-      <Header brand="React App" />
-      <Personajes />
-      <hr />
-      <Footer />
+      <AppRouter />
     </>
   )
 }
