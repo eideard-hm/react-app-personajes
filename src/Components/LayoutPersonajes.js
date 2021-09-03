@@ -8,7 +8,7 @@ const LayoutPersonajes = ({ personajes = [] }) => {
                     <div className="card" style={{ minWidth: "200px" }}>
                         <img src={personaje.image} alt={personaje.name} />
                         <div className="card-body">
-                            <h5 className="card-title">{personaje.name}</h5>
+                            <h5 className="card-title text-center">{personaje.name}</h5>
                             <hr />
                             <p>Especie: {personaje.species}</p>
                             <p>Localización: {personaje.location.name}</p>
