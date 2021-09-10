@@ -4,8 +4,8 @@ import LayoutPersonajes from './LayoutPersonajes';
 const Personajes = () => {
     const [personaje, setPersonaje] = useState([])
 
-    const getRickAndMorty = async () => {
-        const url = 'https://rickandmortyapi.com/api/character';
+    const defaultUrl = 'https://rickandmortyapi.com/api/character';
+    const getRickAndMorty = async (url) => {
         try {
             const req = await fetch(url);
             const data = await req.json();
@@ -16,14 +16,14 @@ const Personajes = () => {
     }
 
     useEffect(() => {
-        getRickAndMorty();
+        getRickAndMorty(defaultUrl);
     }, [])
 
-    return(
+    return (
         <>
-        <div className="container mt-5">
-            <LayoutPersonajes personajes={personaje} />
-        </div>
+            <div className="container mt-5">
+                <LayoutPersonajes personajes={personaje} />
+            </div>
         </>
     )
 }

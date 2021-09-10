@@ -1,4 +1,4 @@
-import React from 'react'
+import { NavLink } from "react-router-dom"
 
 const LayoutPersonajes = ({ personajes = [] }) => {
     return (
@@ -10,9 +10,11 @@ const LayoutPersonajes = ({ personajes = [] }) => {
                         <div className="card-body">
                             <h5 className="card-title text-center">{personaje.name}</h5>
                             <hr />
+                            <p>Id: {personaje.id}</p>
                             <p>Especie: {personaje.species}</p>
                             <p>Localización: {personaje.location.name}</p>
                         </div>
+                        <NavLink to={`personajes/${personaje.id}`} className="btn btn-primary">Ver Detalle</NavLink>
                     </div>
                 </div>
             ))}
