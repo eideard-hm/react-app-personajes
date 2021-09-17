@@ -12,6 +12,7 @@ const Header = ({ brand }) => {
                         <NavLink to="/" exact={true}>Inicio</NavLink>
                         <NavLink to="/acerca-de">Acerca de</NavLink>
                         <NavLink to="/nosotros">Nosotros</NavLink>
+                        <NavLink to="/posts">Posts</NavLink>
                         <NavLink to="/personajes">Personajes</NavLink>
                     </nav>
                 </div>

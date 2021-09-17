@@ -7,6 +7,7 @@ import DetallePersonaje from '../pages/DetallePersonaje'
 import HomePage from '../pages/HomePage'
 import NosotrosPage from '../pages/NosotrosPage'
 import NotFound from '../pages/NotFound'
+import PostsPage from '../pages/PostsPage'
 
 const AppRouter = () => {
     return (
@@ -17,6 +18,7 @@ const AppRouter = () => {
                 <Route path="/nosotros" component={NosotrosPage} exact={true} />
                 <Route path="/personajes" component={Personajes} exact={true} />
                 <Route path="/personajes/:id" component={DetallePersonaje} exact={true} />
+                <Route path="/posts" component={PostsPage} exact={true} />
                 <Route path="/" component={HomePage} exact={true} />
                 <Route path="*" component={NotFound} />
             </Switch>
